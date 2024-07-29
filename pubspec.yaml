@@ -1,0 +1,93 @@
+name: wassit_cars_rental_app
+description: "A new Flutter project."
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.1 <4.0.0'
+  
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: 
+  feedback: 
+  flutter_email_sender: 
+  dartz: 
+  firebase_auth: 
+  get_it: 
+  flutter_screenutil: 
+  firebase_cloud_firestore: 
+  shared_preferences: 
+  image_cropper: 
+  image_picker: 
+  firebase_core: 
+  cherry_toast: 
+  animated_bottom_navigation_bar: 
+  font_awesome_flutter: 
+  gap: 
+  flutter_bloc: 
+  toggle_switch: 
+  geolocator: 
+  flutter_svg: 
+  geocoding: 
+  intl: 
+  flutter_local_notifications: 
+  timezone: 
+  rxdart: 
+  firebase_storage: 
+  carousel_slider: 
+  cached_network_image: 
+  uuid: 
+  firebase_pagination: 
+  loading_animation_widget: 
+  url_launcher: ^6.3.0 
+  share_plus: 
+  circular_menu: ^4.0.0
+  rename: ^3.0.2
+  flutter_markdown: ^0.7.3
+  numberpicker: ^2.1.2
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
+  flutter_test:
+    sdk: flutter
+  flutter_lints:
+  objectbox_generator: 
+  build_runner: 
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/logo/logo.png"
+  min_sdk_android: 21
+
+    
+flutter:
+  fonts:
+    - family: goldbill
+      fonts:
+        - asset: assets/fonts/goldbill/Goldbill-XLLight.ttf
+
+    - family: goldbillBold
+      fonts:
+        - asset: assets/fonts/goldbill/Goldbill-XSExtraBold.ttf
+
+    - family: arabic
+      fonts:
+        - asset: assets/fonts/hacen_maghreb/alfont_com_Hacen-Maghreb-Lt-1.ttf
+  
+    - family: sevenSegment
+      fonts:
+        - asset: assets/fonts/seven-segement/Seven Segment.ttf
+  
+  assets:
+    - assets/
+    - assets/background/
+    - assets/images/
+    - assets/icons/
+ 
+  uses-material-design: true
