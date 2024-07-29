@@ -3,9 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gap/gap.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:wassit_cars_rental_app/firebase_options.dart';
 import 'package:wassit_cars_rental_app/src/bloc/bottom_nav_bar_cubit.dart';
-import 'package:wassit_cars_rental_app/src/core/font_family.dart';
+import 'package:wassit_cars_rental_app/src/core/app_color.dart';
+import 'package:wassit_cars_rental_app/src/core/app_extension.dart';
+import 'package:wassit_cars_rental_app/src/presentation/get-started/get_started_screen.dart';
 import 'src/injection_container.dart';
 import 'package:timezone/data/latest.dart' as tz;
 
@@ -13,6 +17,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   tz.initializeTimeZones();
+
   setUp();
 
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [
@@ -20,12 +25,13 @@ void main() async {
   ]);
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
-    statusBarIconBrightness: Brightness.dark,
-    statusBarBrightness: Brightness.dark,
+    statusBarIconBrightness: Brightness.light,
+    statusBarBrightness: Brightness.light,
     systemNavigationBarColor: Colors.transparent,
     systemNavigationBarIconBrightness: Brightness.dark,
     systemNavigationBarDividerColor: Colors.transparent,
   ));
+
   SystemChrome.setSystemUIChangeCallback((systemOverlaysAreVisible) async {
     await Future.delayed(const Duration(seconds: 1));
     SystemChrome.restoreSystemUIOverlays();
@@ -58,7 +64,7 @@ class _MyAppState extends State<MyApp> {
             // locale: const Locale("ar"),
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
-              fontFamily: arabic,
+              fontFamily: GoogleFonts.montserrat().fontFamily,
             ),
             home: BlocBuilder<BottomNavBarCubit, int>(
               builder: (context, state) {
@@ -66,7 +72,7 @@ class _MyAppState extends State<MyApp> {
                   builder: (context) {
                     ScreenUtil.init(context);
                     // return const HomeScreen();
-                    return const Placeholder();
+                    return const GetStartedScreen();
                   },
                 );
               },

@@ -49,6 +49,7 @@ dependencies:
   rename: ^3.0.2
   flutter_markdown: ^0.7.3
   numberpicker: ^2.1.2
+  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1
@@ -86,6 +87,7 @@ flutter:
   
   assets:
     - assets/
+    - assets/logo/
     - assets/background/
     - assets/images/
     - assets/icons/
