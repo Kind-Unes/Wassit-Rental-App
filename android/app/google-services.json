@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "764601250260",
+    "project_id": "wassit-cars",
+    "storage_bucket": "wassit-cars.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764601250260:android:a50e9d12b1b844d20ce641",
+        "android_client_info": {
+          "package_name": "come.example.wassit_cars_rental_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPOVAlN3bGmAu-0WjhBzxVFHb2ndgO9WQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
