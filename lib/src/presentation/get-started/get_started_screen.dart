@@ -153,11 +153,13 @@ class GetStartedScreen extends StatelessWidget {
                 title: 'Get Started',
                 fontColor: Colors.black,
                 onTap: () {
-                  context.push(const LoginScreen()); 
+                  context.push(const LoginScreen());
                 },
                 borderRaduis: 200,
               )),
-          Gap(15.h),
+          const Spacer(
+            flex: 1000,
+          )
         ],
       ),
     );
