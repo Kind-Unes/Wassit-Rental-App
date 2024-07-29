@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:wassit_cars_rental_app/src/core/app_extension.dart';
-import 'package:wassit_cars_rental_app/src/injection_container.dart';
 import 'package:wassit_cars_rental_app/src/presentation/auth/widgets/custom_triangle_painter.dart';
+import 'package:wassit_cars_rental_app/src/widgets/primary_button.dart';
 import 'package:wassit_cars_rental_app/src/widgets/text_feild.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -21,122 +21,141 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // resizeToAvoidBottomInset: false,
       backgroundColor: const Color.fromARGB(255, 38, 38, 38),
       body: Stack(
         children: [
-          Transform.scale(
-              scale: 0.7,
-              child: Image.asset(
-                "assets/logo/logo.png",
-                color: Colors.white,
-              )),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  Transform.scale(
-                    scaleX: 1.1,
-                    child: TriangleWidget(
-                      size: Size(context.width, context.height / 5),
-                    ),
-                  ),
-                  Container(
-                    width: context.width,
-                    height: context.height / 1.9,
-                    decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 30, 30, 30)),
-                    child: Transform.translate(
-                      offset: Offset(0, -70.h),
-                      child: SingleChildScrollView(
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 40.w),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text(
-                                "AppLocalizations.of(context)!.login",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 40.sp,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Gap(30.h),
-                              CustomTextField(
-                                isPassword: false,
-                                controller: emailController,
-                                label: '',
-                                icon: Icons.email,
-                                keyBoardType: TextInputType.visiblePassword,
-                              ),
-                              Gap(10.h),
-                              CustomTextField(
-                                isPassword: true,
-                                controller: passwordController,
-                                maxLines: 1,
-                                label: '',
-                                icon: Icons.email,
-                                keyBoardType: TextInputType.visiblePassword,
-                              ),
-                              Gap(10.h),
-                              // forgot password
-                              Align(
-                                alignment: Alignment.centerRight,
-                                child: InkWell(
-                                  onTap: () {},
-                                  child: Text(
-                                    "AppLocalizations.of(context)!.forgotPassword",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 14.sp,
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                ),
-                              ),
-                              Gap(40.h),
-                              // goBack
-                              // PrimaryButton(
-                              //     text: isLogging
-                              //         ? "Please Wait ..."
-                              //         : "AppLocalizations.of(context)!.login",
-                              //     onTap: isLogging
-                              //         ? null
-                              //         : () async {
-                              //             await login(context);
-                              //           }),
-                              // Gap(20.h),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "Don't have an account?",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 14.sp,
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                  Gap(10.w),
-                                  GestureDetector(
-                                    onTap: () {},
-                                    child: Text(
-                                      "Sign Up",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 14.sp,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
+          Positioned(
+            top: 20.h,
+            right: 0,
+            left: 0,
+            child: Center(
+              child: Transform.scale(
+                scale: 1.2,
+                child: Image.asset(
+                  "assets/logo/logo.png",
+                  color: Colors.white,
+                  height: 220,
+                  width: 220,
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: 0,
+            child: Stack(
+              children: [
+                Column(
+                  children: [
+                    Transform.scale(
+                      scaleX: 1.1,
+                      child: TriangleWidget(
+                        size: Size(context.width, context.height / 5),
                       ),
                     ),
+                    Container(
+                      width: context.width,
+                      height: context.height / 1.9,
+                      decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 30, 30, 30)),
+                    ),
+                  ],
+                ),
+                Positioned(
+                  bottom: 0,
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 40.w),
+                    width: context.width,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Register",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 40.sp,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Gap(30.h),
+                        CustomTextField(
+                          isPassword: false,
+                          controller: emailController,
+                          label: 'Email',
+                          icon: Icons.email,
+                          keyBoardType: TextInputType.visiblePassword,
+                        ),
+                        Gap(20.h),
+                        CustomTextField(
+                          isPassword: true,
+                          controller: passwordController,
+                          maxLines: 1,
+                          label: 'Password',
+                          icon: Icons.email,
+                          keyBoardType: TextInputType.visiblePassword,
+                        ),
+                        Gap(20.h),
+                        CustomTextField(
+                          isPassword: true,
+                          controller: passwordController,
+                          maxLines: 1,
+                          label: 'Password',
+                          icon: Icons.email,
+                          keyBoardType: TextInputType.visiblePassword,
+                        ),
+                        Gap(10.h),
+                        // forgot password
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: InkWell(
+                            onTap: () {},
+                            child: Text(
+                              "Forgot Password?",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ),
+                        ),
+                        Gap(50.h),
+                        PrimaryButton(
+                            color: Colors.orangeAccent,
+                            title: "Log In",
+                            onTap: () {},
+                            borderRaduis: 8,
+                            fontColor: Colors.black),
+
+                        Gap(20.h),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Don't have an account?",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                            Gap(10.w),
+                            GestureDetector(
+                              onTap: () {},
+                              child: Text(
+                                "Sign Up",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14.sp,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Gap(20.h),
+                      ],
+                    ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ],
