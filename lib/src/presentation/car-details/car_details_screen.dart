@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
@@ -20,6 +21,14 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
   @override
   void initState() {
     initPage();
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.light,
+      systemNavigationBarColor: Colors.transparent,
+      systemNavigationBarIconBrightness: Brightness.light,
+      systemNavigationBarDividerColor: Colors.transparent,
+    ));
     super.initState();
   }
 
@@ -231,13 +240,18 @@ class _CarDetailsScreenState extends State<CarDetailsScreen> {
                                 TextStyle(color: Colors.black.withOpacity(.6)),
                           ),
                           Gap(15.h),
-                          const Text(
-                            "Features",
-                            maxLines: 4,
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w600),
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Features",
+                                maxLines: 4,
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600),
+                              ),
+                            ],
                           ),
                           Gap(5.h),
                           //

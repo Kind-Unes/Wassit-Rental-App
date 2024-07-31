@@ -3,12 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:wassit_cars_rental_app/firebase_options.dart';
 import 'package:wassit_cars_rental_app/src/bloc/bottom_nav_bar_cubit.dart';
 import 'package:wassit_cars_rental_app/src/core/font_family.dart';
 import 'package:wassit_cars_rental_app/src/presentation/car-details/car_details_screen.dart';
-import 'package:wassit_cars_rental_app/src/presentation/profile/profile_screen.dart';
+import 'package:wassit_cars_rental_app/src/presentation/notifications/notifications_screen.dart';
 import 'src/injection_container.dart';
 import 'package:timezone/data/latest.dart' as tz;
 
@@ -71,7 +70,7 @@ class _MyAppState extends State<MyApp> {
                   builder: (context) {
                     ScreenUtil.init(context);
 
-                    return const CarDetailsScreen();
+                    return const NotificationsScreen();
                   },
                 );
               },

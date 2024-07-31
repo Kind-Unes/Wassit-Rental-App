@@ -485,6 +485,6 @@ class SearchTextField extends StatelessWidget {
         ),
       ),
     );
-    
+
   }
 }
