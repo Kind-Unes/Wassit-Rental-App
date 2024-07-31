@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
@@ -63,21 +64,23 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     onTap: () {},
                     iconSize: 15,
                   ),
-                  Text(
-                    "Profile",
-                    style:
-                        TextStyle(fontSize: 17.sp, fontWeight: FontWeight.w400),
+                  Center(
+                    child: Text(
+                      "Profile",
+                      style: TextStyle(
+                          fontSize: 20.sp, fontWeight: FontWeight.w500),
+                    ),
                   ),
                   MyIconButton(
                     size: 45.sp,
-                    icon: FontAwesomeIcons.search,
+                    icon: FontAwesomeIcons.signOut,
                     onTap: () {},
                     iconSize: 15,
                   ),
                 ],
               ),
 
-              Gap(30.h),
+              Gap(15.h),
 
               Container(
                 height: 110,
@@ -111,7 +114,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ),
               //
-              Gap(30.h),
+              Gap(20.h),
             ]),
           ),
 
@@ -149,7 +152,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       overflow: TextOverflow.ellipsis,
                       color: Colors.black,
                       fontSize: 20,
-                      fontWeight: FontWeight.bold),
+                      fontWeight: FontWeight.w600),
                 ),
                 Gap(10.h),
 
@@ -162,13 +165,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         onTap: () {},
                         context: context),
                     _profileElement(
-                        title: 'Delete \n Account',
-                        icon: Icons.delete_outline,
+                        title: 'My\nRentals',
+                        icon: Icons.car_rental,
                         onTap: () {},
                         context: context),
                     _profileElement(
-                        title: 'Change \n Password ',
-                        icon: Icons.password_outlined,
+                        title: 'Change \n Password',
+                        icon: Icons.delete_outline,
                         onTap: () {},
                         context: context),
                   ],
@@ -183,7 +186,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       overflow: TextOverflow.ellipsis,
                       color: Colors.black,
                       fontSize: 20,
-                      fontWeight: FontWeight.bold),
+                      fontWeight: FontWeight.w600),
                 ),
 
                 Gap(10.h),
@@ -244,16 +247,28 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         });
                       }),
                 ),
-                Gap(10.h),
+
+                Gap(30.h),
                 PrimaryButton(
                   // color: Colors.orange,
                   color: Colors.black,
-                  title: 'LOG OUT',
+                  title: 'SAVE CHANGES',
                   fontColor: Colors.white,
                   onTap: () {},
                   borderRaduis: 200,
                 ),
-                Gap(15.h),
+                Gap(20.h),
+                const Center(
+                  child: Text(
+                    "DELETE ACCOUNT",
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+
+                Gap(30.h),
               ],
             ),
           ),

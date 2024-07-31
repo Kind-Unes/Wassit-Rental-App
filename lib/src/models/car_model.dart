@@ -13,16 +13,20 @@ class CarModel {
   final double rate;
 
   // features
+
+
+  final double pricePerDay;
+  final String modelNameLowerCase;
+
   final CarColors color;
   final int year;
   final int seatsNumber;
-  final double pricePerDay;
+  
   final bool isAutomatic; // Gearbox (AUTOMATIC OR Manual)
   final FuelType fuelType;
   final int enginePower;
   final Trim trim;
   final String modelName;
-  final String modelNameLowerCase;
   final CarBrand brand;
   final int mileage;
   final bool isAirConditioner;

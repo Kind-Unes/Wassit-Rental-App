@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
-import 'package:wassit_cars_rental_app/src/core/app_color.dart';
 
 class FavoritesScreen extends StatelessWidget {
   const FavoritesScreen({super.key});
@@ -201,17 +200,21 @@ class MyIconButton extends StatelessWidget {
     required this.icon,
     required this.onTap,
     required this.iconSize,
+    this.color,
+    this.fontColor,
   });
 
   final double size;
   final double iconSize;
   final IconData icon;
   final Function() onTap;
+  final Color? color;
+  final Color? fontColor;
 
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: color ?? Colors.white,
       borderRadius: BorderRadius.circular(200),
       child: InkWell(
         onTap: onTap,
@@ -225,6 +228,7 @@ class MyIconButton extends StatelessWidget {
           child: Center(
             child: Icon(
               icon,
+              color: fontColor,
               size: iconSize,
             ),
           ),
