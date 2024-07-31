@@ -11,14 +11,14 @@ import 'package:wassit_cars_rental_app/src/bloc/bottom_nav_bar_cubit.dart';
 import 'package:wassit_cars_rental_app/src/core/app_color.dart';
 import 'package:wassit_cars_rental_app/src/core/app_extension.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<MainScreen> createState() => _MainScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _MainScreenState extends State<MainScreen> {
   @override
   void initState() {
     // theme
@@ -32,23 +32,6 @@ class _HomeScreenState extends State<HomeScreen> {
     ));
     super.initState();
   }
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: AppColors.backgroundColor2,
-      body: Stack(
-        children: [
-          MainScreen(),
-          BottomNavigationBar(),
-        ],
-      ),
-    );
-  }
-}
-
-class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -502,5 +485,6 @@ class SearchTextField extends StatelessWidget {
         ),
       ),
     );
+    
   }
 }

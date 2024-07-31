@@ -1,7 +1,6 @@
 import 'package:cherry_toast/resources/arrays.dart';
 import 'package:flutter/material.dart';
 import 'package:cherry_toast/cherry_toast.dart';
-import 'package:wassit_cars_rental_app/src/core/font_family.dart';
 
 class ToastsHelper {
   void success(BuildContext context, String title) {
@@ -9,10 +8,8 @@ class ToastsHelper {
       title: Text(
         title,
         textDirection: TextDirection.rtl,
-        style: const TextStyle(
-            fontFamily: arabic,
-            fontWeight: FontWeight.bold,
-            color: Colors.black),
+        style:
+            const TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
       ),
       animationType: AnimationType.fromRight,
       animationDuration: const Duration(milliseconds: 1000),
@@ -25,18 +22,14 @@ class ToastsHelper {
       title: Text(
         title,
         textDirection: TextDirection.rtl,
-        style: const TextStyle(
-            fontFamily: arabic,
-            fontWeight: FontWeight.bold,
-            color: Colors.black),
+        style:
+            const TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
       ),
       description: Text(
         desc,
         textDirection: TextDirection.rtl,
-        style: const TextStyle(
-            fontFamily: arabic,
-            fontWeight: FontWeight.bold,
-            color: Colors.black),
+        style:
+            const TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
       ),
       animationType: AnimationType.fromRight,
       animationDuration: const Duration(milliseconds: 1000),
@@ -53,10 +46,8 @@ class ToastsHelper {
         description,
         textAlign: TextAlign.right,
         textDirection: TextDirection.rtl,
-        style: const TextStyle(
-            fontFamily: arabic,
-            fontWeight: FontWeight.bold,
-            color: Colors.black),
+        style:
+            const TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
       ),
       animationType: AnimationType.fromRight,
       animationDuration: const Duration(milliseconds: 1000),
@@ -71,7 +62,6 @@ class ToastsHelper {
         textAlign: TextAlign.right,
         textDirection: TextDirection.rtl,
         style: TextStyle(
-            fontFamily: arabic,
             fontWeight: FontWeight.normal,
             color: Colors.black.withOpacity(0.7)),
       ),
@@ -79,10 +69,8 @@ class ToastsHelper {
         title,
         textAlign: TextAlign.right,
         textDirection: TextDirection.rtl,
-        style: const TextStyle(
-            fontFamily: arabic,
-            fontWeight: FontWeight.bold,
-            color: Colors.black),
+        style:
+            const TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
       ),
       animationType: AnimationType.fromRight,
       animationDuration: const Duration(milliseconds: 1000),

@@ -67,24 +67,26 @@ flutter_icons:
   min_sdk_android: 21
 
     
+    
 flutter:
   fonts:
-    - family: goldbill
+    - family: montserrat
       fonts:
-        - asset: assets/fonts/goldbill/Goldbill-XLLight.ttf
+        - asset: assets/fonts/montserrat/Montserrat-Bold.ttf
+        - weight: 500
 
-    - family: goldbillBold
-      fonts:
-        - asset: assets/fonts/goldbill/Goldbill-XSExtraBold.ttf
+        - asset: assets/fonts/montserrat/Montserrat-ExtraBold.ttf
+        - weight: 600
 
-    - family: arabic
-      fonts:
-        - asset: assets/fonts/hacen_maghreb/alfont_com_Hacen-Maghreb-Lt-1.ttf
-  
-    - family: sevenSegment
-      fonts:
-        - asset: assets/fonts/seven-segement/Seven Segment.ttf
-  
+
+        - asset: assets/fonts/montserrat/Montserrat-SemiBold.ttf
+        - weight: 400
+
+        - asset: assets/fonts/montserrat/Montserrat-Medium.ttf
+        - weight: 300
+
+
+
   assets:
     - assets/
     - assets/logo/

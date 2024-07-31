@@ -6,8 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wassit_cars_rental_app/firebase_options.dart';
 import 'package:wassit_cars_rental_app/src/bloc/bottom_nav_bar_cubit.dart';
-import 'package:wassit_cars_rental_app/src/presentation/get-started/get_started_screen.dart';
-import 'package:wassit_cars_rental_app/src/presentation/home/home_screen.dart';
+import 'package:wassit_cars_rental_app/src/core/font_family.dart';
+import 'package:wassit_cars_rental_app/src/presentation/profile/profile_screen.dart';
 import 'src/injection_container.dart';
 import 'package:timezone/data/latest.dart' as tz;
 
@@ -23,8 +23,8 @@ void main() async {
   ]);
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
-    statusBarIconBrightness: Brightness.light,
-    statusBarBrightness: Brightness.light,
+    statusBarIconBrightness: Brightness.dark,
+    statusBarBrightness: Brightness.dark,
     systemNavigationBarColor: Colors.transparent,
     systemNavigationBarIconBrightness: Brightness.dark,
     systemNavigationBarDividerColor: Colors.transparent,
@@ -62,15 +62,15 @@ class _MyAppState extends State<MyApp> {
             // locale: const Locale("ar"),
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
-              fontFamily: GoogleFonts.montserrat().fontFamily,
+              fontFamily: montserrat,
             ),
             home: BlocBuilder<BottomNavBarCubit, int>(
               builder: (context, state) {
                 return Builder(
                   builder: (context) {
                     ScreenUtil.init(context);
-                    // return const HomeScreen();
-                    return const HomeScreen();
+
+                    return const ProfileScreen();
                   },
                 );
               },

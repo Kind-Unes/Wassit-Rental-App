@@ -28,14 +28,14 @@ class ConfirmationDialog extends StatelessWidget {
       title: Text(
         title,
         style: const TextStyle(
-            fontFamily: arabic,
+
             fontWeight: FontWeight.bold,
 ), // Green title text color
       ),
       content: Text(
         content,
         style: const TextStyle(
-            fontFamily: arabic,
+
             fontWeight: FontWeight.bold,
             color: Colors.black),
       ),
@@ -49,7 +49,7 @@ class ConfirmationDialog extends StatelessWidget {
           child: Text(
             optionTwoText,
             style: const TextStyle(
-                fontFamily: arabic,
+    
                 fontWeight: FontWeight.bold,
                 color: Colors.black54), // Grey cancel button text color
           ),
@@ -61,7 +61,7 @@ class ConfirmationDialog extends StatelessWidget {
           },
           child: Text(optionOneText,
               style: const TextStyle(
-                  fontFamily: arabic,
+      
                   fontWeight: FontWeight.bold,
                   )),
         ),

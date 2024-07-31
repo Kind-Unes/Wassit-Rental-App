@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:wassit_cars_rental_app/src/core/font_family.dart';
 
 class CustomTextField extends StatefulWidget {
   const CustomTextField({

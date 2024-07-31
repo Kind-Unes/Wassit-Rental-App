@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wassit_cars_rental_app/src/core/app_extension.dart';
@@ -37,7 +36,7 @@ class PrimaryButton extends StatelessWidget {
               title,
               style: TextStyle(
                   color: fontColor,
-                  fontWeight: FontWeight.w900,
+                  fontWeight: FontWeight.w500,
                   fontSize: 18.sp),
             ),
           ),
