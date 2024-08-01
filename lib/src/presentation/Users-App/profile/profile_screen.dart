@@ -9,7 +9,7 @@ import 'package:gap/gap.dart';
 import 'package:numberpicker/numberpicker.dart';
 import 'package:wassit_cars_rental_app/src/core/app_color.dart';
 import 'package:wassit_cars_rental_app/src/core/app_extension.dart';
-import 'package:wassit_cars_rental_app/src/presentation/favorites/favorites_screen.dart';
+import 'package:wassit_cars_rental_app/src/presentation/Users-App/favorites/favorites_screen.dart';
 import 'package:wassit_cars_rental_app/src/widgets/primary_button.dart';
 
 class ProfileScreen extends StatefulWidget {

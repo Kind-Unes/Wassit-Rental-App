@@ -5,7 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
 import 'package:wassit_cars_rental_app/src/core/app_color.dart';
 import 'package:wassit_cars_rental_app/src/core/app_extension.dart';
-import 'package:wassit_cars_rental_app/src/presentation/favorites/favorites_screen.dart';
+import 'package:wassit_cars_rental_app/src/presentation/Users-App/favorites/favorites_screen.dart';
 
 class NotificationsScreen extends StatefulWidget {
   const NotificationsScreen({super.key});

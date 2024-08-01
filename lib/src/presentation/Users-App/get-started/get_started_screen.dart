@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:wassit_cars_rental_app/src/core/app_color.dart';
 import 'package:wassit_cars_rental_app/src/core/app_extension.dart';
-import 'package:wassit_cars_rental_app/src/presentation/auth/login_page.dart';
+import 'package:wassit_cars_rental_app/src/presentation/Users-App/auth/login_page.dart';
 import 'package:wassit_cars_rental_app/src/widgets/primary_button.dart';
 
 class GetStartedScreen extends StatelessWidget {

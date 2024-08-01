@@ -6,16 +6,16 @@ import 'package:gap/gap.dart';
 import 'package:readmore/readmore.dart';
 import 'package:wassit_cars_rental_app/src/core/app_color.dart';
 import 'package:wassit_cars_rental_app/src/core/app_extension.dart';
-import 'package:wassit_cars_rental_app/src/presentation/favorites/favorites_screen.dart';
+import 'package:wassit_cars_rental_app/src/presentation/Users-App/favorites/favorites_screen.dart';
 
-class RentalDetailsScreen extends StatefulWidget {
-  const RentalDetailsScreen({super.key});
+class CarDetailsScreen extends StatefulWidget {
+  const CarDetailsScreen({super.key});
 
   @override
-  State<RentalDetailsScreen> createState() => _RentalDetailsScreenState();
+  State<CarDetailsScreen> createState() => _CarDetailsScreenState();
 }
 
-class _RentalDetailsScreenState extends State<RentalDetailsScreen> {
+class _CarDetailsScreenState extends State<CarDetailsScreen> {
   bool isPageLoading = true;
 
   @override
@@ -239,61 +239,6 @@ class _RentalDetailsScreenState extends State<RentalDetailsScreen> {
                             style:
                                 TextStyle(color: Colors.black.withOpacity(.6)),
                           ),
-
-                          Gap(15.h),
-                          const Text(
-                            "Rental Period",
-                            maxLines: 4,
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          Gap(5.h),
-
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-// from X DATE to Y DATE WIDGET
-                              Row(
-                                children: [
-                                  Text(
-                                    "12/12/2021",
-                                    maxLines: 1,
-                                    style: TextStyle(
-                                        overflow: TextOverflow.ellipsis,
-                                        color: Colors.black.withOpacity(.9),
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.normal),
-                                  ),
-                                  Gap(5.w),
-                                  const Icon(Icons.arrow_right_alt_sharp),
-                                  Gap(5.w),
-                                  Text(
-                                    "15/12/2021",
-                                    maxLines: 1,
-                                    style: TextStyle(
-                                        overflow: TextOverflow.ellipsis,
-                                        color: Colors.black.withOpacity(.9),
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.normal),
-                                  ),
-                                ],
-                              ),
-
-                              MyIconButton(
-                                size: 40,
-                                icon: FontAwesomeIcons.arrowRight,
-                                onTap: () {},
-                                iconSize: 20,
-                                color: Colors.black,
-                                fontColor: Colors.white,
-                                key: const Key(""),
-                              )
-                            ],
-                          ),
-                          // rental perdiod
-
                           Gap(15.h),
                           const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -422,7 +367,7 @@ class _RentalDetailsScreenState extends State<RentalDetailsScreen> {
                       //
                       Expanded(
                         child: Material(
-                          color: Colors.orange,
+                          color: const Color.fromARGB(255, 29, 32, 37),
                           borderRadius: BorderRadius.circular(2000.r),
                           child: InkWell(
                             onTap: () {},
@@ -433,7 +378,7 @@ class _RentalDetailsScreenState extends State<RentalDetailsScreen> {
                                   borderRadius: BorderRadius.circular(2000.r)),
                               child: Center(
                                 child: Text(
-                                  "In Progress",
+                                  "Rental Now",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.w500,

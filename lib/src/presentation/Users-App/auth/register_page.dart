@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:wassit_cars_rental_app/src/core/app_extension.dart';
-import 'package:wassit_cars_rental_app/src/presentation/auth/widgets/custom_triangle_painter.dart';
+import 'package:wassit_cars_rental_app/src/presentation/Users-App/auth/widgets/custom_triangle_painter.dart';
 import 'package:wassit_cars_rental_app/src/widgets/text_feild.dart';
 
 class RegisterPage extends StatefulWidget {

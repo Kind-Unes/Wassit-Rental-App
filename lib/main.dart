@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wassit_cars_rental_app/firebase_options.dart';
 import 'package:wassit_cars_rental_app/src/bloc/bottom_nav_bar_cubit.dart';
 import 'package:wassit_cars_rental_app/src/core/font_family.dart';
-import 'package:wassit_cars_rental_app/src/presentation/my-rentals/rental_details_screen.dart';
+import 'package:wassit_cars_rental_app/src/presentation/Admin-App/admin_panel_screen.dart';
 import 'src/injection_container.dart';
 import 'package:timezone/data/latest.dart' as tz;
 
@@ -69,7 +69,7 @@ class _MyAppState extends State<MyApp> {
                   builder: (context) {
                     ScreenUtil.init(context);
 
-                    return const RentalDetailsScreen();
+                    return const AdminPanelScreen();
                   },
                 );
               },

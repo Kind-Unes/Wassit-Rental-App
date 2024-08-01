@@ -132,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                   const Gap(12),
-                  const SearchTextField(),
+                  const HomeSearchTextField(),
                   const Gap(20),
                   const Align(
                     alignment: Alignment.bottomLeft,
@@ -229,7 +229,10 @@ class _HomeScreenState extends State<HomeScreen> {
 class AgencyElement extends StatelessWidget {
   const AgencyElement({
     super.key,
+    this.onTap,
   });
+
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -237,9 +240,7 @@ class AgencyElement extends StatelessWidget {
       color: AppColors.backgroundColor2,
       borderRadius: BorderRadius.circular(12.r),
       child: InkWell(
-        onTap: () {
-          //
-        },
+        onTap: onTap,
         borderRadius: BorderRadius.circular(12.r),
         child: Container(
           height: (context.width.w - 10.w - 40.w) / 2 + 35.h,
@@ -527,8 +528,8 @@ class BottomNavigationBar extends StatelessWidget {
   }
 }
 
-class SearchTextField extends StatelessWidget {
-  const SearchTextField({super.key});
+class HomeSearchTextField extends StatelessWidget {
+  const HomeSearchTextField({super.key});
 
   @override
   Widget build(BuildContext context) {
