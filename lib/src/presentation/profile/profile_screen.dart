@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:bottom_sheet/bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -145,14 +146,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 Gap(10.h),
 
-                const Text(
-                  "Common Features",
-                  maxLines: 1,
-                  style: TextStyle(
-                      overflow: TextOverflow.ellipsis,
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text(
+                      "Common Features",
+                      maxLines: 1,
+                      style: TextStyle(
+                          overflow: TextOverflow.ellipsis,
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600),
+                    ),
+                    IconButton(
+                      padding: EdgeInsets.zero,
+                      icon:
+                          const Center(child: Icon(FontAwesomeIcons.language)),
+                      onPressed: () async {
+                        await _showChangeLanguageBottomSheet(context);
+                      },
+                    )
+                  ],
                 ),
                 Gap(10.h),
 
@@ -172,7 +186,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     _profileElement(
                         title: 'Change \n Password',
                         icon: Icons.delete_outline,
-                        onTap: () {},
+                        onTap: () {
+                          _showChangePasswordBottomSheet(context);
+                        },
                         context: context),
                   ],
                 ),
@@ -276,6 +292,54 @@ class _ProfileScreenState extends State<ProfileScreen> {
           //
         ]),
       ),
+    );
+  }
+
+  Future<dynamic> _showChangePasswordBottomSheet(BuildContext context) {
+    return showFlexibleBottomSheet(
+      minHeight: 0,
+      useRootScaffold: true,
+      initHeight: 0.5,
+      bottomSheetBorderRadius: BorderRadius.circular(12.r),
+      maxHeight: 1,
+      context: context,
+      builder: (context, scrollController, bottomSheetOffset) => Material(
+        color: AppColors.backgroundColor2,
+        borderRadius: BorderRadius.circular(12.r),
+        child: Container(
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(12.r)),
+          child: ListView(
+            controller: scrollController,
+            children: const [],
+          ),
+        ),
+      ),
+      anchors: [0, 0.5, 1],
+      isSafeArea: true,
+    );
+  }
+
+  Future<dynamic> _showChangeLanguageBottomSheet(BuildContext context) {
+    return showFlexibleBottomSheet(
+      minHeight: 0,
+      useRootScaffold: true,
+      initHeight: 0.5,
+      bottomSheetBorderRadius: BorderRadius.circular(12.r),
+      maxHeight: 1,
+      context: context,
+      builder: (context, scrollController, bottomSheetOffset) => Material(
+        color: AppColors.backgroundColor2,
+        borderRadius: BorderRadius.circular(12.r),
+        child: Container(
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(12.r)),
+          child: ListView(
+            controller: scrollController,
+            children: const [],
+          ),
+        ),
+      ),
+      anchors: [0, 0.5, 1],
+      isSafeArea: true,
     );
   }
 

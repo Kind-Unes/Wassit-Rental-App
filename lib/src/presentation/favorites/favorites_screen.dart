@@ -41,16 +41,7 @@ class FavoritesScreen extends StatelessWidget {
             ),
             Gap(20.h),
             const Column(
-              children: [
-                FavoritesElement(),
-                FavoritesElement(),
-                FavoritesElement(),
-                FavoritesElement(),
-                FavoritesElement(),
-                FavoritesElement(),
-                FavoritesElement(),
-                // Add more FavoritesElement as needed
-              ],
+              children: [],
             ),
           ],
         ),

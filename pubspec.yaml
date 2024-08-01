@@ -51,6 +51,7 @@ dependencies:
   numberpicker: ^2.1.2
   google_fonts: ^6.2.1
   readmore: ^3.0.0
+  bottom_sheet: ^4.0.4
 
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1
