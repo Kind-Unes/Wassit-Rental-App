@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -48,6 +50,7 @@ class AuthController {
 
       return Left(AuthSuccess(result.user!.uid, 'User logged in successfully'));
     } on FirebaseAuthException catch (e) {
+      log(e.toString());
       return Right(AuthFail(handleLoginError(e)));
     }
   }

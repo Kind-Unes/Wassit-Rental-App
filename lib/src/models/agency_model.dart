@@ -1,4 +1,3 @@
-
 class AgencyModel {
   final String id;
   final String email;
@@ -14,15 +13,15 @@ class AgencyModel {
   final DateTime updatedAt;
   final DateTime beginDate;
   final bool isActivated;
-  final List notificationsList;
   final String notificationToken;
+  final bool didFinishAuth;
 
   // notifications
   // social media
 
   AgencyModel({
-    required this.notificationsList,
     required this.id,
+    required this.didFinishAuth,
     required this.notificationToken,
     required this.email,
     required this.password,
@@ -42,6 +41,7 @@ class AgencyModel {
   factory AgencyModel.fromJson(Map<String, dynamic> json) {
     return AgencyModel(
       id: json['id'],
+      didFinishAuth: json["didFinishAuth"],
       notificationToken: json['notificationToken'],
       email: json['email'],
       password: json['password'],
@@ -56,13 +56,13 @@ class AgencyModel {
       updatedAt: DateTime.parse(json['updatedAt']),
       beginDate: DateTime.parse(json['beginDate']),
       isActivated: json['isActivated'],
-      notificationsList: List<dynamic>.from(json['notificationsList']),
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
       'id': id,
+      'didFinishAuth': didFinishAuth,
       'notificationToken': notificationToken,
       'email': email,
       'password': password,
@@ -77,8 +77,6 @@ class AgencyModel {
       'updatedAt': updatedAt.toIso8601String(),
       'beginDate': beginDate.toIso8601String(),
       'isActivated': isActivated,
-      'notificationsList': notificationsList,
     };
   }
 }
-

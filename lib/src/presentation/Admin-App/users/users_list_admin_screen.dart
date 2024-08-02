@@ -7,7 +7,6 @@ import 'package:wassit_cars_rental_app/src/core/app_extension.dart';
 import 'package:wassit_cars_rental_app/src/presentation/Users-App/favorites/favorites_screen.dart';
 import 'package:wassit_cars_rental_app/src/presentation/Users-App/home/home_screen.dart';
 import 'package:wassit_cars_rental_app/src/presentation/Admin-App/agencies/agencies_list_admin_screen.dart';
-import 'package:wassit_cars_rental_app/src/presentation/Admin-App/agencies/agency_details_admin_screen.dart';
 import 'package:wassit_cars_rental_app/src/presentation/Admin-App/users/user_details_admin_screen.dart';
 
 class UsersListAdminScreen extends StatefulWidget {

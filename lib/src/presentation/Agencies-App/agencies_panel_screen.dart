@@ -3,16 +3,15 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wassit_cars_rental_app/src/core/app_extension.dart';
-import 'package:wassit_cars_rental_app/src/presentation/Admin-App/statistics/statistics_screen.dart';
 
-class AdminPanelScreen extends StatefulWidget {
-  const AdminPanelScreen({super.key});
+class AgenciesPanelScreen extends StatefulWidget {
+  const AgenciesPanelScreen({super.key});
 
   @override
-  State<AdminPanelScreen> createState() => _MyHomePageState();
+  State<AgenciesPanelScreen> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<AdminPanelScreen> {
+class _MyHomePageState extends State<AgenciesPanelScreen> {
   late StreamSubscription subscription;
   bool isDeviceConnected = false;
   bool isAlertSet = false;
@@ -96,7 +95,7 @@ class _MyHomePageState extends State<AdminPanelScreen> {
           if (didPop) {
             return;
           }
-          // context.showToast(
+          // // context.showToast(
           //     message: "اضغط مرة أخرى للخروج من التطبيق",
           //     backgroundColor: Colors.black);
         },
@@ -144,20 +143,14 @@ class _MyHomePageState extends State<AdminPanelScreen> {
                     crossAxisSpacing: 40,
                     mainAxisSpacing: 30,
                     children: [
+                      itemDashboard('Rentals', Icons.car_rental,
+                          Colors.deepOrange, () {}),
                       itemDashboard(
-                          'Users', Icons.group, Colors.deepOrange, () {}),
+                          'Our Cars', Icons.car_crash, Colors.green, () {}),
                       itemDashboard(
-                          'Agencies', Icons.store, Colors.green, () {}),
+                          'Profile', Icons.person, Colors.amber, () {}),
                       itemDashboard(
-                          'Statistics', Icons.analytics, Colors.purple, () {
-                        context.push(const StatisticsAdminScreen());
-                      }),
-                      itemDashboard('Rentals', Icons.car_rental_rounded,
-                          Colors.brown, () {}),
-                      itemDashboard(
-                          'Requests', Icons.border_color, Colors.amber, () {}),
-                      itemDashboard('code promo',
-                          Icons.qr_code_scanner_outlined, Colors.blue, () {}),
+                          'Statistics', Icons.analytics, Colors.brown, () {}),
                     ],
                   ),
                 ),

@@ -55,7 +55,7 @@ class ToastsHelper {
     ).show(context);
   }
 
-  void error(BuildContext context, String title, String description) {
+  void error(BuildContext context, String description) {
     CherryToast.error(
       description: Text(
         description,
@@ -65,12 +65,11 @@ class ToastsHelper {
             fontWeight: FontWeight.normal,
             color: Colors.black.withOpacity(0.7)),
       ),
-      title: Text(
-        title,
+      title: const Text(
+        "Error Occured",
         textAlign: TextAlign.right,
         textDirection: TextDirection.rtl,
-        style:
-            const TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
       ),
       animationType: AnimationType.fromRight,
       animationDuration: const Duration(milliseconds: 1000),

@@ -5,8 +5,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wassit_cars_rental_app/firebase_options.dart';
 import 'package:wassit_cars_rental_app/src/bloc/bottom_nav_bar_cubit.dart';
+import 'package:wassit_cars_rental_app/src/bloc/setup_info_cubit.dart';
 import 'package:wassit_cars_rental_app/src/core/font_family.dart';
-import 'package:wassit_cars_rental_app/src/presentation/Admin-App/admin_panel_screen.dart';
+import 'package:wassit_cars_rental_app/src/presentation/Agencies-App/agencies_panel_screen.dart';
+import 'package:wassit_cars_rental_app/src/presentation/Agencies-App/auth/register_screens/info_owner_name_screen.dart';
+import 'package:wassit_cars_rental_app/src/presentation/Users-App/home/home_screen.dart';
 import 'src/injection_container.dart';
 import 'package:timezone/data/latest.dart' as tz;
 
@@ -22,11 +25,11 @@ void main() async {
   ]);
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
+    systemNavigationBarColor: Colors.transparent,
+    systemNavigationBarDividerColor: Colors.transparent,
     statusBarIconBrightness: Brightness.dark,
     statusBarBrightness: Brightness.dark,
-    systemNavigationBarColor: Colors.transparent,
     systemNavigationBarIconBrightness: Brightness.dark,
-    systemNavigationBarDividerColor: Colors.transparent,
   ));
 
   SystemChrome.setSystemUIChangeCallback((systemOverlaysAreVisible) async {
@@ -55,10 +58,12 @@ class _MyAppState extends State<MyApp> {
           providers: [
             BlocProvider(
               create: (context) => BottomNavBarCubit(),
+            ),
+            BlocProvider(
+              create: (context) => SetUpInfoCubit(),
             )
           ],
           child: MaterialApp(
-            // locale: const Locale("ar"),
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
               fontFamily: montserrat,
@@ -68,8 +73,7 @@ class _MyAppState extends State<MyApp> {
                 return Builder(
                   builder: (context) {
                     ScreenUtil.init(context);
-
-                    return const AdminPanelScreen();
+                    return const AdminsAppDistributor();
                   },
                 );
               },
@@ -78,5 +82,23 @@ class _MyAppState extends State<MyApp> {
         );
       },
     );
+  }
+}
+
+class AdminsAppDistributor extends StatelessWidget {
+  const AdminsAppDistributor({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const AgenciesPanelScreen();
+  }
+}
+
+class UsersAppDistributor extends StatelessWidget {
+  const UsersAppDistributor({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const HomeScreen();
   }
 }

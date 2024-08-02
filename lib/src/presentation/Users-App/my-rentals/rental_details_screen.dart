@@ -7,6 +7,7 @@ import 'package:readmore/readmore.dart';
 import 'package:wassit_cars_rental_app/src/core/app_color.dart';
 import 'package:wassit_cars_rental_app/src/core/app_extension.dart';
 import 'package:wassit_cars_rental_app/src/presentation/Users-App/favorites/favorites_screen.dart';
+import 'package:wassit_cars_rental_app/src/presentation/Users-App/my-rentals/my_rentals_screen.dart';
 
 class RentalDetailsScreen extends StatefulWidget {
   const RentalDetailsScreen({super.key});
@@ -90,7 +91,11 @@ class _RentalDetailsScreenState extends State<RentalDetailsScreen> {
                                   MyIconButton(
                                     size: 45.sp,
                                     icon: FontAwesomeIcons.arrowLeft,
-                                    onTap: () {},
+                                    onTap: () {
+                                      context.pop();
+                                      context.pop();
+                                      context.push(const MyRentalsScreen());
+                                    },
                                     iconSize: 15,
                                     fontColor: Colors.white,
                                     color:
@@ -293,6 +298,30 @@ class _RentalDetailsScreenState extends State<RentalDetailsScreen> {
                             ],
                           ),
                           // rental perdiod
+
+                          Gap(5.h),
+                          Row(
+                            children: [
+                              const Text(
+                                "Rental ID:",
+                                maxLines: 4,
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600),
+                              ),
+                              Gap(5.w),
+                              const Text(
+                                "#12",
+                                maxLines: 4,
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ],
+                          ),
+                          Gap(5.h),
 
                           Gap(15.h),
                           const Row(

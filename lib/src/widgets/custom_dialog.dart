@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wassit_cars_rental_app/src/core/font_family.dart';
 
 class ConfirmationDialog extends StatelessWidget {
   final String title;
